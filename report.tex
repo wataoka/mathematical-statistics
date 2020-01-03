@@ -1,0 +1,109 @@
+\documentclass[uplatex]{jsarticle}
+\和暦
+\usepackage[top=25truemm,bottom=25truemm,left=25truemm,right=25truemm]{geometry}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{color}
+\usepackage{authblk}
+\usepackage{amsmath}
+
+\title{\huge 数理統計学特論}
+\author{199X223X 綿岡晃輝}
+\affil{神戸大学大学院 システム情報学研究科 計算科学専攻}
+\date{}
+
+\begin{document}
+    \maketitle
+    \newpage
+    
+    \section{$\sum_{i}\sum_{j}(Y_{ij} - Y_{i・})(Y_{i・} - \bar{Y_{・・}}) = 0$を示せ.}
+    \begin{align*}
+        \sum_{i}\sum_{j}(Y_{ij} - Y_{i・})(Y_{i・} - \bar{Y}_{・・})
+        &= \sum_{i}(Y_{i・} - \bar{Y}_{・・})\sum_{j}(Y_{ij} - Y_{i・}) \\
+        &= \sum_{i}(Y_{i・} - \bar{Y}_{・・})(\sum_{j}Y_{ij} - \sum_{j}Y_{i・}) \\
+        &= \sum_{i}(Y_{i・} - \bar{Y}_{・・})(nY_{i・} - nY_{i・}) \\
+        &= 0 \\
+    \end{align*}
+    \newpage
+
+    \section{ダイヤ問題}
+    \subsection{$w_1$カラットの大きいダイヤと$w_2$カラットの小さいダイヤがある. 天秤を用いて真値$w_1, w_2$を求めたい. ダイヤを天秤に1つずつ乗せて計測する実験をAとする. 同じ皿に2つ乗せて和を測定し, 別の皿に2つ乗せて差を計測する実験をBとする. 1回の測定誤差が$\mathcal{N}(0, \sigma^2)$に従うとき, Bの実験誤差がAの実験誤差の$1/\sqrt{2}$倍になることを説明せよ.}
+
+    \noindent
+    実験A: \\
+    大きいダイヤの観測値の確率変数を$Y_1$とし, 小さいダイヤの観測値の確率変数を$Y_2$とすると, 
+    \begin{align*}
+        Y_1 &= w_1 + \epsilon_1, \epsilon_1 \sim \mathcal{N}(0, \sigma^2) \\
+        Y_2 &= w_2 + \epsilon_2, \epsilon_2 \sim \mathcal{N}(0, \sigma^2) \\
+    \end{align*}
+    となるので, \\
+     $Y_1, Y_2$はそれぞれ
+    \begin{align*}
+        Y_1 \sim \mathcal{N}(w_1, \sigma^2) \\
+        Y_2 \sim \mathcal{N}(w_2, \sigma^2) \\
+    \end{align*}
+    に従う. \\
+
+    \noindent
+    実験B: \\
+    二つのダイヤの和の観測値の確率変数と二つのダイヤの差の観測値の確率変数を以下のようにおく.
+    \begin{align*}
+        \alpha = Y_1 + Y_2 \\
+        \beta = Y_1 - Y_2
+    \end{align*}
+    すると, それぞれは次のような分布に従う.
+    \begin{align*}
+        \alpha &\sim \mathcal{N}(w_1 + w_2, 2\sigma^2) \\
+        \beta &\sim \mathcal{N}(w_1 - w_2, 0)
+    \end{align*}
+    よって,
+    \begin{align*}
+        Y_1 &= \frac{\alpha + \beta}{2} \sim \mathcal{N}(w_1, \frac{2\sigma^2}{4}) = \mathcal{N}(w_1, (\frac{\sigma}{\sqrt{2}})^2) \\
+        Y_2 &= \frac{\alpha - \beta}{2} \sim \mathcal{N}(w_2, \frac{2\sigma^2}{4}) = \mathcal{N}(w_2, (\frac{\sigma}{\sqrt{2}})^2)
+    \end{align*}
+    となる. \\
+    つまり, Bの実験誤差はAの実験誤差の$1/\sqrt{2}$倍になる.
+    \newpage
+
+    \subsection{ダイヤが4種類あるとき, 天秤に1つずつ乗せる実験と比べて, 実験誤差を1/2に抑えられる実験を計画しなさい.}
+    4種類のダイヤの観測値の確率変数を$Y_1, Y_2, Y_3, Y_4$とすると, 
+    \begin{align*}
+        Y_1 \sim \mathcal{N}(w_1, \sigma^2) \\
+        Y_2 \sim \mathcal{N}(w_2, \sigma^2) \\
+        Y_3 \sim \mathcal{N}(w_3, \sigma^2) \\
+        Y_4 \sim \mathcal{N}(w_4, \sigma^2) \\
+    \end{align*}
+    に従う.
+
+    次に, 4つの確率変数$\alpha, \beta_1, \beta_2, \beta_3$を次のようにおく.
+    \begin{align*}
+        \alpha  &= Y_1 + Y_2 + Y_3 + Y_4 \\
+        \beta_1 &= Y_1 + Y_2 - Y_3 - Y_4 \\
+        \beta_2 &= Y_1 - Y_2 + Y_3 - Y_4 \\
+        \beta_3 &= Y_1 - Y_2 - Y_3 + Y_4 \\
+    \end{align*}
+    すると, それぞれは次のような分布に従う.
+    \begin{align*}
+        \alpha  &\sim \mathcal{N}(w_1+w_2+w_3+w_4, 4\sigma^2) \\
+        \beta_1 &\sim \mathcal{N}(w_1+w_2-w_3-w_4, 0) \\
+        \beta_2 &\sim \mathcal{N}(w_1-w_2+w_3-w_4, 0) \\
+        \beta_3 &\sim \mathcal{N}(w_1-w_2-w_3+w_4, 0) \\
+    \end{align*}
+    
+    よって,
+    \begin{align*}
+        Y_1 &= \frac{\alpha + \beta1 + \beta2 + \beta3}{4} \sim \mathcal{N}(w_1, \frac{4\sigma^2}{16}) = \mathcal{N}(w_1, (\frac{\sigma}{2})^2) \\
+        Y_2 &= \frac{\alpha + \beta1 - \beta2 - \beta3}{4} \sim \mathcal{N}(w_2, \frac{4\sigma^2}{16}) = \mathcal{N}(w_2, (\frac{\sigma}{2})^2) \\
+        Y_3 &= \frac{\alpha - \beta1 + \beta2 - \beta3}{4} \sim \mathcal{N}(w_3, \frac{4\sigma^2}{16}) = \mathcal{N}(w_3, (\frac{\sigma}{2})^2) \\
+        Y_4 &= \frac{\alpha - \beta1 - \beta2 + \beta3}{4} \sim \mathcal{N}(w_4, \frac{4\sigma^2}{16}) = \mathcal{N}(w_4, (\frac{\sigma}{2})^2) \\
+    \end{align*}
+    となる. \\
+    つまり, 以下のような手順で実験すると, 1つ1つ計測する実験に比べて実験誤差が1/2になる. \\
+    4つのダイヤを$y_1, y_2, y_3, y_4$とした時, 
+    \begin{itemize}
+        \item $y_1, y_2, y_3, y_4$を同じ皿に乗せて和を計測する.
+        \item $y_1, y_2$を一つの皿に乗せて, $y_3, y_4$をもう一つの皿に乗せて差を計測する.
+        \item $y_1, y_3$を一つの皿に乗せて, $y_2, y_4$をもう一つの皿に乗せて差を計測する.
+        \item $y_1, y_4$を一つの皿に乗せて, $y_2, y_3$をもう一つの皿に乗せて差を計測する.
+    \end{itemize}
+
+\end{document}

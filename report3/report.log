@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.2-u1.25-190131-2.6 (utf8.uptex) (TeX Live 2019) (preloaded format=uplatex 2019.10.12)  25 JAN 2020 12:19
+This is e-upTeX, Version 3.14159265-p3.8.2-u1.25-190131-2.6 (utf8.uptex) (TeX Live 2019) (preloaded format=uplatex 2019.10.12)  25 JAN 2020 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -220,22 +220,7 @@ LaTeX Font Info:    ... okay on input line 14.
 * modes: 
 * h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-36.83537pt
-* \headheight=20.0pt
-* \headsep=15.69727pt
-* \topskip=12.76065pt
-* \footskip=28.45792pt
-* \marginparwidth=18.49365pt
-* \marginparsep=18.49365pt
-* \columnsep=18.49365pt
-* \skip\footins=16.0pt plus 5.0pt minus 2.0pt
-* \hoffset=0.0pt
+*offset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
@@ -270,28 +255,56 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
  [2]
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 6.47278pt on input line 22.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
-
- (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
 
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+! LaTeX Error: Environment *align undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23     \begin{*align}
+                       
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.23     \begin{*align}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
+Here is how much of TeX's memory you used:
+ 2128 strings out of 493215
+ 27327 string characters out of 6144072
+ 103371 words of memory out of 5000000
+ 6129 multiletter control sequences out of 15000+600000
+ 11334 words of font info for 57 fonts, out of 8000000 for 9000
+ 934 hyphenation exceptions out of 8191
+ 27i,5n,21p,252b,248s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on report.dvi (2 pages, 1124 bytes).
+e/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 24.
- [3]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
+1.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
+ [2] [3]
 (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 2679 strings out of 494228
- 32952 string characters out of 6176079
+ 2699 strings out of 494228
+ 33299 string characters out of 6176079
  106793 words of memory out of 5000000
- 6996 multiletter control sequences out of 15000+600000
- 13392 words of font info for 67 fonts, out of 8000000 for 9000
+ 7013 multiletter control sequences out of 15000+600000
+ 13986 words of font info for 70 fonts, out of 8000000 for 9000
  19 hyphenation exceptions out of 8191
  30i,8n,31p,202b,248s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.dvi (3 pages, 4448 bytes).
+Output written on report.dvi (3 pages, 5592 bytes).

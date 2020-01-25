@@ -1,0 +1,59 @@
+\documentclass[uplatex]{jsarticle}
+\和暦
+\usepackage[top=25truemm,bottom=25truemm,left=25truemm,right=25truemm]{geometry}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{color}
+\usepackage{authblk}
+\usepackage{amsmath, amssymb}
+
+\title{\huge 数理統計学特論}
+\author{199X223X 綿岡晃輝}
+\affil{神戸大学大学院 システム情報学研究科 計算科学専攻}
+\date{}
+
+\begin{document}
+    \maketitle
+    \newpage
+    
+    \section{BIBD(11, 11, 5, 5, 2)とBIBD(13, 13, 4, 4, 1)を作れ.}
+
+    \newpage
+
+    \section{$z^2=6x^2-y^2$は自明な解しか持たないことを示せ.}
+    \noindent
+    $z^2=6x^2-y^2$は自明な解以外を持つと仮定し, 矛盾を導く. \\
+    任意の整数kに対して, \\
+    \begin{eqnarray}
+        & (3k+1)^2 = 9k^2 + 6k + 1  \equiv 1\ (mod.3) \\
+        & (3k+2)^2 = 9k^2 + 12k + 4  \equiv 1\ (mod.3)
+    \end{eqnarray}
+    が言える. \\
+    \begin{align*}
+        x=3^\alpha x' \ (\alpha \in {0} \cup \mathbb{N}, x':3の倍数でない整数) \\
+        y=3^\beta y' \ (\beta \in {0} \cup \mathbb{N}, y':3の倍数でない整数) \\
+        z=3^\gamma z' \ (\gamma \in {0} \cup \mathbb{N}, z':3の倍数でない整数) \\
+    \end{align*}
+    とおき, 一般性を失わないので, $\beta \geq \gamma$とすると,
+    \begin{align*}
+        6x^2 &= 6(3^\alpha x')^2 \\
+        &= 3^{2\alpha + 1}\{2(x')^2\} \\
+    \end{align*}
+    となり, 
+    \begin{align*}
+        y^2 + z^2 &= (3^{\beta}y')^2 + (3^{\gamma}z')^2 \\
+        &= 3^{2\gamma} \{(3^{\beta - \gamma}y')^2 + (z')^2\}
+    \end{align*}
+    となる. \\
+    ここで, $x'$は3の倍数ではないため, (1),(2)より$2(x'^2) \equiv 2\ (mod.3)$となる. \\
+    また, $(3^{\beta - \gamma}y')^2 \equiv 0, (z')^2 \equiv 1\ (mod.3)$なので,
+    $(3^{\beta - \gamma}y')^2 + (z')^2 \equiv 1\ (mod.3)$となる.\\
+    つまり, $2(x')^2$も$(3^{\beta - \gamma}y')^2 + (z')^2$も3の倍数にはならない. \\
+    故に, $6x^2$と$y^2+z^2$を素因数分解した時, 3の累乗が同じにならないため, 
+    \begin{align*}
+        6x^2 \neq y^2 + z^2 
+    \end{align*}
+    となり, 矛盾. \\
+    \noindent
+    従って,$z^2=6x^2-y^2$は自明な解しか持たない.
+
+\end{document}
